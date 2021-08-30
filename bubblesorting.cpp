@@ -11,25 +11,24 @@ int main()
     {
         cin>>a[i];
     }
-    for(int i=0;i<n-1;i++)
+    int count=1;
+    while(count<n)
     {
-        for(int j=i+1;j<n;j++)
-         {
-             if(a[j]<a[i])
-             {
-                int temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
-             }
-         }
-
+       for(int i=0;i<n;i++)
+       {
+           if(a[i]>a[i+1])
+           {
+               int temp=a[i];
+               a[i]=a[i+1];
+               a[i+1]=temp;
+           }
+       } 
+       count++;
     }
-cout<<"enter after sorting  "<<endl;
+    cout<<"enter after sorting  "<<endl;
     for(int i=0;i<n;i++)
     {
         cout<<a[i]<<" ";
     }
-    
-    
     return 0;
 }
