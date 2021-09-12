@@ -1,0 +1,32 @@
+// this code is for to check if the number is palindrome 
+// and to reverse the number 
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    int n,temp=0,rem=0;
+    cout<<"enter an number "<<endl;
+    cin>>n;
+    int tempn=n;
+    while (n!=0)   // to reverse the number 
+    {
+        rem=n%10;
+        temp=temp*10+rem;
+        n=n/10;
+    }
+    if(tempn==temp)
+    {
+        cout<<"its an palindrome "<<endl;
+
+    }
+    else
+    {
+        cout<<"sorry its not an palindrome "<<endl;
+        cout<<" but the reverse of the number is "<<temp<<endl;
+        
+    }
+    
+    return 0;
+
+}
