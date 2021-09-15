@@ -12,18 +12,18 @@ int main()
    int found=0;
    while(num>0)
    {
-       rem=num%10;
+       rem=num%10;      //to get the digit in the number 
        num=num/10;
-       if(rem==digit)
+       if(rem==digit)   //comparing the remainder with the digit i.e. equality of the number and the digit 
        {
-           count++;
+           count++;     //if the number is found incrementing the count value
            found=1;
 
        }
    }
    if(found==0)
    {
-       cout<<"the entered digit is not found in the number "<<endl;
+       cout<<"the entered digit is not found in the number "<<endl;     //it is for the non occurance of the digit in an number 
    }
   
   else
