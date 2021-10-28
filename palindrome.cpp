@@ -3,6 +3,7 @@
 // madhu =! madam its not an palindrome
 
 #include<iostream>
+#include<string>
 using namespace std;
 int main()
 {
