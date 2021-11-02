@@ -1,30 +1,25 @@
-// prgram to convert the characters of string from lowercase to uppercase letters using functions 
+// frequency of a character in a string 
 #include<bits/stdc++.h>
-#include<algorithm>
 #include<iostream>
-#include<string>
 using namespace std;
 int main()
 {
     system("cls");
     cout<<"enter the string "<<endl;
     string s;
-    int f[26]={0};
     getline(cin,s);
+    int f[256]={0};
     for(int i=0;i<s.length();i++)
     {
-        f[s[i]-'a']++;
+        f[s[i]]++;
     }
-    char ch ='a';
-    for(int i=0;i<26;i++)
+    for(int i=0;i<256;i++)
     {
-        if(f[i]==0)
+        if(f[i]!=0)
         {
-            continue;
+            cout<<char(i)<<" "<<f[i]<<endl;
         }
-        else
-        {cout<<char(ch+i)<<"  " <<f[i]<<endl;}
     }
 
-    return 0; 
+    return 0;
 }
