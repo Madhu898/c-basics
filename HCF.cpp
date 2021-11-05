@@ -1,25 +1,16 @@
+#include<bits/stdc++.h>
 #include <iostream>
 using namespace std;
-
-int main()
+int hcf(int a, int b) {
+   if (b == 0)
+   return a;
+   return hcf(b, a % b);
+}
+int main() 
 {
+   system("cls");
    int a,b;
-   cout<<"enter the two numbers "<<endl;
    cin>>a>>b;
-  int large=max(a,b);
-  int small=min(a,b);
-   int rem=1;
-   while(small==0)
-   {
-       rem=large%small;
-       large=small;
-       small=rem;
-
-   }
-   cout << "the HCF of (" << a << " ," << b << " )"
-                 << " is "
-                 << " = " << large<< endl;
-   
-   
-    return 0;
+   cout<<hcf(a,b);
+   return 0;
 }
