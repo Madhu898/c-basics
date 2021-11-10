@@ -1,4 +1,16 @@
-// frequency of a character in a string 
+/*frequency of a character in a string 
+    input = 
+    enter the string - massssgggaaajj
+     output =           
+              a 4
+              g 3
+              j 2
+              m 1
+              s 4
+
+
+
+*/
 #include<bits/stdc++.h>
 #include<iostream>
 using namespace std;
